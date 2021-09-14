@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+:root{
+    --bgc :#e1aaf2;
+    --active-color:#b049f5;
+    --non-active-color:#ede8ed;
+
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Mulish', sans-serif ;
+    background-color: var(--bgc);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height:100vh;
+    margin:0;
+    overflow: hidden;
+}
+
+.container{
+    text-align: center;
+}
+.container .progress-container{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin-bottom: 30px;
+
+    position :relative;
+}
+.container .progress-container::before{
+    content: '';
+    background-color: var(--non-active-color);
+    width:100%;
+    height: 4px;
+
+    position:absolute;
+    top:50%;
+    left:0;
+
+    transform:translateY(-50%);
+    z-index: -1;
+
+}
+.progress-container .progress{
+    background-color: var(--active-color);
+    width:0;
+    height:4px;
+
+    position:absolute;
+
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
+
+    z-index:-1;
+
+    transition:0.4s ease;
+}
+
+.progress-container .circle{
+    background-color: #fff;
+    color:#000;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--non-active-color);
+
+    transition: 0.4s ease;
+
+}
+.progress-container .circle.active{
+    border-color: var(--active-color);
+
+}
+.container .btn{
+    background-color: var(--active-color);
+    color:#fff;
+    border:0;
+    /*topbottom leftright*/
+    padding :8px 30px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    color:black;
+
+}
+
+.container .btn:focus{
+    outline: 0;
+}
+
+.container .btn:active{
+    transform:scale(0.9);
+}
+
+.container .btn:disabled{
+    background-color: var(--non-active-color);
+    cursor: not-allowed;
+}
+
+
+.sub-container{
+    box-sizing: border-box;
+    background-color: white;
+    margin:0;
+    justify-content: center;
+    align-items: center;
+    border:1px solid rgba(0,0,0,0.2);
+    margin-bottom:30px;
+    border:2px solid black;
+}
+.sub-container .image-container img{
+    width:500px;
+    border:1px solid black;
+
+}
+.sub-container .bio{
+    margin-bottom:10px;
+    font-size: 15px;
+    font-weight: bold;
+
+
+}

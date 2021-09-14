@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+
+    margin:0;
+    overflow:hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg{
+    /*width:100vw;*/
+    /*height:100vh;*/
+
+    width : calc(100vw + 50px);
+    height : calc(100vh + 50px);
+
+    background-image: url(../img/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    position: absolute;
+    /*top:0;*/
+    /*left:0;*/
+
+    top:-25px;
+    left:-25px;
+
+    z-index: -1;
+
+/*bluring background image using filter properties */
+    filter: blur(70px);
+}
+
+.loading-text{
+    color:#fff;
+    font-size: 50px;
+}
+
+/*(num,inmin,inmax,outmin,outmax){*/
+
+/*return (num-inmin) * (outmax - outmin) / (inmax - inmin) + outmin ;*/
+
+/*}*/
+
+
+/*18L2BLUR WDF2008*/
